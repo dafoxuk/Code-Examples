@@ -1,0 +1,944 @@
+// Page
+
+.entry-content {
+  @include psize(1, 0);
+}
+
+.se-backend .se-content {
+  padding-top: 150px;
+  @include mq($pocket){
+    padding-top: 60px;
+  }
+}
+
+// Login/Register page
+
+.se-login {
+  position: relative;
+  display: table;
+  width:100%;
+  min-height: 100vh;
+  height: 100%;
+  #page {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .site-content {
+    padding-top: 0;
+  }
+  .site-branding {
+    max-width: 400px;
+    @include mq($pocket){
+      margin-top: 40px;
+      max-width:200px;
+    }
+  }
+  
+  .se-form {
+    margin: 18px auto;
+    margin: 1rem auto;
+    @include mq($pocket){
+      text-align: center;
+    }
+    #loginform {
+      position: relative;
+    }
+    & #loginform:after {
+      @include mq($lap-and-up){
+        content: "or";
+        position: absolute;
+        color: $grey;
+        @include fsize(1.4);
+        right: 0;
+        top: 20%;
+      }
+    }
+    input[type='text'], input[type='password'] {
+      display: block;
+      color: $dark_grey;
+    }
+    input {
+      @include psize(14/18, 1);
+      color: $dark_grey;
+      @include mq($pocket){
+        @include psize(8/18, 0.8);
+        width: 80%;
+      }
+    }
+    input.button {
+      color: $white
+    }
+    
+    input[type='submit'] {
+      color: $white;
+    }
+    
+    .gfield {
+      width: 100%;
+    }
+    
+    .gfield .ginput_container {
+      display: block;
+      width: 100%;
+    }
+    
+    .wpoa-login-button {
+      display: block;
+      background-color: $white;
+      color: $dark_grey;
+      @include psize(14/18, 1);
+      border-radius: 10px;
+      @include msize(1.6, 0);
+      @include mq($pocket){
+         @include psize(8/18, 0.8);
+      }
+      &:hover, &:focus {
+        background-color: $blue;
+        color: $white;
+      }
+      
+    }
+    
+    
+  }
+  .se-tabs {
+    display: table;
+    width: 100%;
+    li {
+      width: 50%;
+      text-align: center;
+      display: table-cell;
+      @include fsize(26/18);
+      @include psize(14/18);
+      line-height: 1.4;
+      font-weight: 700;
+      @include mq($pocket){
+        @include fsize(0.8);
+        @include psize(0.8);
+      }
+    }
+    
+    .se-current {
+      background-color: $light_grey;
+      color: $blue;
+    }
+  }
+  
+  .se-tab-content.grid, .se-tab-content.grid__cell {
+    background-color: $light_grey;
+    margin-left: 0;
+  }
+  
+}
+
+
+// Dashboard
+
+.se-dashboard__body {
+  border-radius: 0 15px 0 0;
+  padding-bottom: 36px;
+  padding-bottom: 2rem;
+}
+
+.se-dashboard__notify,
+.se-dashboard__form,
+.se-dashboard__trial {
+  @include msize(0, 0, 1, 0);
+  @include psize(1.25);
+  
+  @include mq( $pocket ) {
+    margin: 1rem 2%;
+  }
+  .gform_wrapper {
+    margin: 0;
+    ul li.gfield {
+      margin-top: 0;
+    }
+  }
+  .gform_wrapper .gform_footer {
+    padding: 0;
+  }
+  .gform_heading {
+    display: none;
+  }
+}
+.se-dashboard__notify .button {
+  margin-top: 8px;
+  margin-top: 0.44444rem;  
+  margin-bottom: 8px;
+  margin-bottom: 0.44444rem;
+}
+
+.se-dashboard__form {
+  .ginput_container_text {
+    width: 100%;
+  }
+  .gform_wrapper ul.gform_fields li.gfield {
+    padding-right: 0;
+  }
+  .gform_wrapper .gform_footer input[type="submit"].gform_button {
+    width: 100%;
+  }
+  .gform_wrapper .gform_footer {
+    margin: 8px 0 0;
+  }
+  .gform_wrapper form ul li.gfield .gfield_label {
+    font-weight: 300;
+  }
+}
+
+.se-dashboard__code {
+  @include msize(0, 0, 1, 0);
+  @include psize(1.25);
+  @include mq( $pocket ) {
+    margin: 1rem 2%;
+  }
+  label {
+    font-weight: 300;
+  }
+  input[type="text"]{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"]{
+    width: 100%; 
+  }
+}
+
+.se-dashboard__webinar {
+ list-style-type: none;
+  background-color: $light_grey; 
+  border-radius: 10px;
+  @include psize(0.5, 1);
+  @include msize(0.5, 0);
+  @include mq( $pocket ) {
+    margin: 0.5rem 2%;
+  }  
+}
+.se-dashboard__webinar-heading {
+  margin: 1rem 0.5rem;
+  padding: 0;
+}
+.se-dashboard__webinar-date {
+  font-weight: 700;
+  margin: 0.5rem;
+  color: $blue;
+}
+.se-dashboard__webinar-title {
+  margin: 0.5rem;
+  color: $navy;
+}
+.se-dashboard__webinar-link {
+  margin: 1rem 0.5rem;
+}
+
+.se-dashboard__trial {
+  
+  p {
+    margin: 0 0 1rem 0;
+  }
+  
+}
+  
+.se-dashboard__feed {
+   position: relative;
+   
+  .se-user-area__avatar  {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+  
+  .avatar {
+    display: none;
+  }
+}
+
+.se-elephant-legend {
+  margin: 0 auto;
+  @include psize(1, 0);
+  @include mq($lap-and-up){
+    @include psize(0, 0, 1, 0);
+  }
+  text-align: center;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.se-elephant-legend__item {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  @include fsize(0.8);
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  .se-elephant-legend__progress {
+    display: none;
+    position: absolute;
+    background-color: $light_grey;
+    border-radius: 4px;
+    padding: 4px;
+    z-index: 10;
+    top: -50px;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+  }
+  &:hover .se-elephant-legend__progress, &:focus .se-elephant-legend__progress {
+    display: block;
+  }
+  .se-elephant-legend__attain {
+    display: none;
+    position: absolute;
+    background-color: $light_grey;
+    border-radius: 4px;
+    padding: 4px;
+    z-index: 10;
+    bottom: -50px;
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+  }
+  &:hover .se-elephant-legend__attain, &:focus .se-elephant-legend__attain {
+    display: block;
+  }  
+  
+}
+
+
+.se-course--add {
+  
+  .se-loading--play {
+      position: absolute;
+      top: 0;
+      left: 40%;
+  }
+}
+
+.se-course--add[data-add-remove='remove'] {
+  
+  position: relative;
+  display: block;
+
+  .card {
+    transition: opacity 250ms;
+    cursor: pointer;
+    &:hover, &:focus {
+      opacity: 0.5;
+    } 
+    
+  }
+  &:hover:after, &:focus:after {
+    content: "remove?";
+    background-color: $red;
+  }
+  &:after {
+    content: 'added';
+    color: $white;
+    background-color: $green;
+    padding: 8px;
+    top: 0;
+    right: 9px;
+    position: absolute;
+    transition: all 250ms;
+    border-radius: 0 10px 0 0;
+  }
+}
+
+.se-course--add[data-add-remove='add'] {
+  
+  position: relative;
+  display: block;
+  
+  .card {
+    transition: opacity 250ms;
+    cursor: pointer;
+  
+    &:hover, &:focus {
+      opacity: 0.5;
+    } 
+    
+  }  
+  &:hover:after, &:focus:after {
+    content: "click to add";
+    background-color: lighten($green, 5%);
+  }
+  &:after {
+    content: 'add';
+    color: $white;
+    background-color: $green;
+    padding: 8px;
+    top: 0;
+    right: 9px;
+    position: absolute;
+    border-radius: 0 10px 0 0;
+  }
+}
+
+#modal-vimeo-player {
+  text-align: center;
+}
+
+// CPD
+
+.cpd {
+  @include psize(2, 0, 2, 0);
+  
+  .course-slider {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.cpd__header {
+  @include psize(1, 2);
+}
+
+.cpd__body {
+  @include psize(1);
+}
+
+.cpd__progress {
+  .card {
+    overflow: unset;
+    
+    .card-image {
+        border-radius: 6px 6px 0 0;
+    }
+    
+  }
+}
+
+.cpd .slick-prev:before, .slick-next:before {
+  color: $navy;
+}
+
+.se-cpd-all-teachers__table {
+  width: 100%;
+  thead td {
+    font-weight: 700;
+    color: $blue;
+  }
+  tbody tr:nth-child(odd){
+    background-color: lighten($lightgrey, 5%);
+  }
+  td {
+    @include psize(1);
+    text-align: center;
+  }
+  td:first-child {
+    border-radius: 10px 0 0 10px;
+  }  
+  td:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.se-cpd-all-teachers__progress {
+    height: 20px;
+    border: 2px solid #efefef;
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.se-cpd-all-teachers__progress-bar {
+    background-color: $green;
+    height: 20px;   
+}
+
+// School CPD View
+
+.se-cpd-filter__dropdown {
+  background-color: $light_grey;
+  color: $dark_grey;
+  @include psize(0.5, 1);
+  border: 2px solid #efefef;
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  display: block;
+}
+
+.se-cpd-filter__label {
+  display: inline-block;
+  border: 1px solid $blue;
+  border-radius: 10px;
+  @include psize(0.25, 1);
+  margin: 0.125rem;
+  transition: background-color 100ms;
+  cursor: pointer;
+  
+  &:hover, &:focus {
+    background-color: $blue;
+    color: $white;
+    &:after {
+      color: $white;
+    }
+  }
+  
+  &:after {
+    content: ' x';
+    color: $red;
+  }
+}
+
+.se-cpd-filter__trigger {
+  position: relative;
+}
+
+.se-cpd-filter__heading {
+  font-weight: 700;
+  color: $navy;
+}
+
+.se-cpd-filter__select {
+  display: none;
+  
+  .se-cpd-filter__trigger.se-cpd-filter__trigger--open & {
+    display: block;
+    position: absolute;
+    background-color: $white;
+    border-radius: 10px;
+    @include psize(1);
+    z-index: 99;
+    width: 100%;
+    @include box-shadow;
+  }
+  
+}
+
+.se-cpd-filter__select-item--selected {
+  color: $blue;
+  font-weight: 700;
+}
+
+.se-cpd-filter__select-group, .se-cpd-filter__select-course {
+    width: 49%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.se-cpd-filter__search {
+  display: block;
+  width: 100%;
+  background-color: $light_grey;
+  color: $dark_grey;
+  
+  @include mq($pocket){
+    margin-top: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+.se-cpd__user {
+  border: 1px solid $light_grey;
+  text-align: left;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.se-cpd__user-avatar {
+  display: inline-block;
+  padding: 0.15rem;
+  @include mq($pocket){
+    display: block;
+  }
+}
+
+.se-cpd__user-name {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.15rem;
+  font-size: 0.85rem;
+  @include mq($pocket){
+    display: block;
+  }
+}
+
+.se-cpd__user__label {
+  width: 50%;
+  color: $dark_grey;
+  display: inline-block;
+}
+
+.se-cpd__user__value {
+  width: 50%;
+  color: $blue;
+}
+
+.se-cpd__user__actions {
+  position: absolute;
+  z-index: 99;
+  background-color: $white;
+  border-radius: 10px;
+  width: 320px;
+  max-width: 100%;
+  @include psize(1.5)
+  @include box-shadow;
+  @include mq($pocket){
+    width: auto;
+    right: 2rem;
+    left: 2rem;
+  }
+}
+
+.image-upload__caption {
+  height: 75px;
+  width: 100%;
+}
+
+.reflect-image {
+  position: relative;
+  display: inherit;
+}
+
+.reflect-image__caption {
+  
+}
+
+.reflect-image--delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+// Bookings
+
+.se-webinar__list {
+  
+  @include mq($pocket){
+    text-align: center;
+  }
+  
+  .se-webinar__item {
+    list-style-type: none;
+    background-color: $light_grey; 
+    border-radius: 10px;
+    display: inline-block;
+    @include psize(0.5, 1);
+    @include msize(0.5);
+  }
+  .se-webinar__date {
+    font-weight: 700;
+    margin: 0.5rem;
+    color: $blue;
+  }
+  .se-webinar__title {
+    margin: 0.5rem;
+    color: $navy;
+  }
+  .se-webinar__link {
+    margin: 0.5rem;
+  }
+}
+
+.se-booking-filter {
+  display: inline-block;
+  width: 48%;
+ }
+.select2-container--default .select2-results__option[aria-disabled=true] {
+  display: none;
+}
+
+.wc-appointments-appointment-form select, #se-available-categories {
+  width: 100%;
+}
+
+.se-bookings-table {
+  td {
+    @include psize(1);
+  }
+}
+
+.button.button--xtra-large {
+  
+  &.button--xtra-large--inactive {
+
+		background-color: $white;
+		color: $grey;
+
+    &:hover, &:focus {
+      
+      background-color: $blue;
+      color: $white;
+      
+    }
+
+  }
+  &:focus {
+    background-color: $blue;
+    color: $white;
+  }
+  &:hover {
+    
+    background-color: $white;
+    color: $blue;
+    
+  }
+}
+
+#staffBioTarget {
+  
+  .staff-content {
+    display: block;
+    @include psize(1, 0);
+  }
+  .avatar-wrap {
+    display: inline-block;
+  }
+  
+  .biography-wrap {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 80%;
+    @include psize(0, 1);
+    
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+.se-backend .woocommerce div.product form.cart .wc-appointments-appointment-form-button {
+  float: none;
+}
+
+// Manage Users
+
+.se-groups__item {
+  color: $blue;
+  background-color: $light_grey;
+  display: block;
+  @include msize(0.5, 0);
+}
+
+.se-groups__item--add-new {
+  color: $white;
+  background-color: $blue;
+  display: block;
+  @include msize(0.5, 0);
+  cursor: pointer;
+  transition: all 1s;
+  &:hover {
+    color: $white;
+    background-color: $green;    
+  }
+}
+
+.se-users-table {
+  min-width:100%;
+  
+  @include mq($pocket){
+    display: block;
+    overflow-y: auto;
+  }
+  
+  td {
+    text-align: left
+  }
+  .se-user-table__select {
+    text-align: center;
+  }
+  
+  .se-user-table__actions {
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(odd){
+    background-color: $light_grey;
+  }
+  
+  .page-numbers {
+    background-color: $light_grey;
+    margin-right: 4px;
+  }
+}
+
+.se-user-table__heading td {
+  @include psize(1);
+  font-weight: 700;
+  color: $blue;
+}
+
+.se-user-table__row td {
+  @include psize(1);
+  border: 1px solid $white;
+}
+
+// Invite and Earn
+.se-invite__form {
+  
+  textarea {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+// BuddyPress
+#buddypress #header-cover-image {
+  background-color: $blue;
+}
+#buddypress div.pagination {
+  float: none;
+}
+
+// Settings
+
+.se-settings {
+  label {
+    min-width: 30%;
+    display: inline-block;
+  }
+  input[type='text'], input[type='password'], input[type='email'], textarea {
+    width: 60%;
+    display: inline-block;
+    padding: 4px 8px;
+  }
+
+  .button--xtra-large {
+    display: inline;
+  }
+}
+
+// Product page
+.lt-page__header {
+  min-height: initial;
+  @include mq($lap-and-up){
+    min-height: 300px;
+    box-sizing: border-box;
+  }
+}
+
+.lt-page__widgets {
+  @include msize(1, 0);
+}
+
+.lt-page__widgets-item {
+  display: inline-block;
+}
+
+.lt-page__widgets-time {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.lt-page__widgets-icon.se-love,
+.lt-page__widgets-icon.se-like {
+  display: inline-block;
+  &:before {
+    height: 35px;
+    width: 35px;
+    margin: 0 8px 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.lt-page__share {
+  text-align: right;
+  @include mq($lap-and-up){
+    margin-top: 0;
+    text-align: left;
+    position: absolute;
+    right: 6px;
+    color: $white;
+  }
+  .se-icons {
+    display: inline-block;
+    margin: 0 4px;
+    @include mq($lap-and-up){
+      color: $white;
+      margin: 8px 0;
+      display: block;
+    }
+  }
+}
+.lt-page__share-title {
+  @include fsize(0.6);
+  padding-bottom: 18px;
+  @include mq($lap-and-up){ 
+    display: block;
+  }
+}
+
+.lt-page__sidebar {
+  margin-bottom: 18px;
+  margin-bottom: 1rem;
+  @include mq($lap-and-up){
+    margin-top: -250px;
+  }
+}
+
+.lt-page__sidebar-cta {
+  text-align: center;
+  @include psize(1, 0);
+    .container-inner--small .button {
+      display: block;
+      margin: 4px 0;
+      
+    }
+}
+
+.lt-page__social {
+    display: inline-block;
+    margin-right: 18px;
+    .se-icons {
+      color: $navy;
+      transition: color 250ms;
+    }
+    &:hover .se-icons {
+        color: $blue;
+      }
+}
+
+.lessons-loop {
+  @include msize(2, 0);
+  padding: 0;
+}
+
+.lessons-loop__row {
+  list-style-type: none;
+  margin: 0;
+  @include psize(1);
+  @include msize(0.5, 0);
+}
+
+.lessons-loop__access {
+  @include fsize(0.9);
+}
+
+.lessons-loop__access--free {
+  border: $blue solid 1px;
+  border-radius: 10px;
+}
+
+.lessons-loop__access--locked {
+  background-color: $navy;
+  color: $white;
+  border-radius: 10px;
+  .lessons-loop__access {
+    color: $white;
+  }
+}
+
+.lessons-loop__access--complete {
+  background-color: $green;
+  color: $white;
+  border-radius: 10px;
+  .lessons-loop__access {
+    color: $white;
+  }
+}
+
+.lessons-loop__title {
+  font-weight: 700;
+  display: block;
+}
