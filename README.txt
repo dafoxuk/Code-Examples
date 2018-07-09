@@ -16,6 +16,12 @@ This is written in ES6 JavaScript (which allows the use of classes, arrow functi
 
 As with the plugin above, I have used OOP, specifically classical objects to keep quite a complicated UI nice and tidy. I could have used a framework such as React to create the view, but I felt it was useful for me to tackle this issue without a framework doing the work for me and I learned a lot in the process. 
 
+Example JavaScript - Pricing Calculator.js
+========================================
+Language: JavaScript
+
+A pricing calculator was required as part of a quotation system. As above, this follows OOP, except this time not written in ES6 and did not require the use of Babel to compile the code.
+
 Example of SASS module
 =======================
 Language: SASS
