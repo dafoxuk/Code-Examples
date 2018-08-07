@@ -1,3 +1,8 @@
+/**
+* Manage Users
+*
+**/
+
 class RenderTable {
 
 	constructor(el) {
