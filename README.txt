@@ -4,7 +4,7 @@ Language: PHP
 
 This was a plugin I wrote for a client who wanted to be able to create exports of WooCommerce orders but also include specific custom fields. The client had tried various products online, but none included all the data she needed.
 
-I used an Object Oriented Programming pattern to improved code readability and keep the code organised.
+I used an Object Oriented Programming pattern to improve code readability and keep the code organised.
 
 Example JavaScript - Manage Users Module
 ========================================
