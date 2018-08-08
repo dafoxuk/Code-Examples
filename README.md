@@ -1,4 +1,4 @@
-WooCommerce Order Exports Plugin
+# WooCommerce Order Exports Plugin
 ================================
 Language: PHP
 
@@ -6,7 +6,7 @@ This was a plugin I wrote for a client who wanted to be able to create exports o
 
 I used an Object Oriented Programming pattern to improve code readability and keep the code organised.
 
-Example JavaScript - Manage Users Module
+# Example JavaScript - Manage Users Module
 ========================================
 Language: JavaScript
 
@@ -22,7 +22,7 @@ Language: JavaScript
 
 A pricing calculator was required as part of a quotation system. As above, this follows OOP, except this time not written in ES6 and did not require the use of Babel to compile the code.
 
-Example of SASS module
+# Example of SASS module
 =======================
 Language: SASS
 
